@@ -1,0 +1,31 @@
+<div class="container my-3">
+    <h3>Temperature Calculator</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">From</label>
+            <select class="form-control" [(ngModel)]="fromDDL">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+            </select>
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">To</label>
+            <select class="form-control" [(ngModel)]="toDDL">
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celsius">Celsius</option>
+            </select>
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Value</label>
+            <input type="text" class="form-control" [(ngModel)]="valueTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <br />
+            <button class="btn btn-dark" (click)="btnCalculate_Click()">Calculate</button>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label fs-4">Result: {{lblResult}}</label>
+    </div>
+</div>

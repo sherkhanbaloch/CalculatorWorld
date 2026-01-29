@@ -1,0 +1,21 @@
+<div class="container my-3">
+    <h3>Age Calculator</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" [(ngModel)]="DOBTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Age at The Date of</label>
+            <input type="date" class="form-control" [(ngModel)]="todayDateTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <br />
+            <button class="btn btn-dark" (click)="btnCalculate_Click()">Calculate Age</button>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label fs-4">{{lblAgeResult}}</label>
+    </div>
+</div>

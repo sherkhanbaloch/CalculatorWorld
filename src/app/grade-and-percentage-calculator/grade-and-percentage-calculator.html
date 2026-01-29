@@ -1,0 +1,25 @@
+<div class="container my-3">
+    <h3>Percentage & Grade Calculator</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Obtained Marks</label>
+            <input type="text" class="form-control" [(ngModel)]="obtainTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Total Marks</label>
+            <input type="text" class="form-control" [(ngModel)]="totalTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <br />
+            <button class="btn btn-dark" (click)="btnCalculate_Click()">Calculate</button>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label fs-4">{{lblPercentage}} </label>
+        <br />
+        <label class="form-label fs-4">{{lblGrade}} </label>
+        <br />
+        <label class="form-label fs-4">{{lblResult}} </label>
+    </div>
+</div>

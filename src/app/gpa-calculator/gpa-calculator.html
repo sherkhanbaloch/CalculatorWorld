@@ -1,0 +1,72 @@
+<div class="container my-3">
+    <h3>GPA Calculator</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-control" [(ngModel)]="subjectTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Credit Hours</label>
+            <input type="number" min="0" max="3" class="form-control" [(ngModel)]="creditTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Grade</label>
+            <select class="form-control" [(ngModel)]="gradeDDL">
+                <option [ngValue]="null">Select Grade</option>
+
+                @for (item of grades; track item.text) {
+                <option [ngValue]="item">{{ item.text }}</option>
+                }
+
+                <!-- <option [ngValue]="4">A+</option>
+                <option [ngValue]="3.75">A</option>
+                <option [ngValue]="3.5">A-</option>
+                <option [ngValue]="3.25">B+</option>
+                <option [ngValue]="3">B</option>
+                <option [ngValue]="2.75">B-</option>
+                <option [ngValue]="2.5">C+</option>
+                <option [ngValue]="2">C</option>
+                <option [ngValue]="1.5">C-</option>
+                <option [ngValue]="0">F</option> -->
+            </select>
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <br />
+            <button class="btn btn-dark" (click)="btnAdd_Click()">Add To List</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 my-3 mx-auto">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Credit Hours</th>
+                        <th>Grade</th>
+                        <th>GPA</th>
+                        <th>Quality Points</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of dt; track item.ID) {
+                    <tr>
+                        <td>{{item.Subject}}</td>
+                        <td>{{item.CreditHours}}</td>
+                        <td>{{item.Grade}}</td>
+                        <td>{{item.GPA}}</td>
+                        <td>{{item.QualityPoints}}</td>
+                        <td class="text-danger text-center" (click)="DeleteRow(item.ID)"><i
+                                class='bx bx-trash me-1'></i></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label fs-4">Your GPA Is: {{lblTotalGPA}} </label>
+    </div>
+</div>

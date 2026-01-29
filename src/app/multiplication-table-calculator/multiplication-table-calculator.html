@@ -1,0 +1,25 @@
+<div class="container my-3">
+    <h3>Multiplication Table Calculator</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Table of Number</label>
+            <input type="text" class="form-control" [(ngModel)]="numberTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Starts From</label>
+            <input type="text" class="form-control" [(ngModel)]="startTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Ends To</label>
+            <input type="text" class="form-control" [(ngModel)]="endTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <br />
+            <button class="btn btn-dark" (click)="btnCalculate_Click()">Calculate</button>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label fs-4" [innerHTML]="lblTable"></label>
+    </div>
+</div>

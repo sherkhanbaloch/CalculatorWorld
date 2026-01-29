@@ -1,0 +1,53 @@
+<div class="container my-3">
+    <h3>Arithmetic Calculator</h3>
+    <hr />
+    <div class="w-50 mx-auto">
+        <div class="row my-2">
+            <div class="col-md-12">
+                <label class="text-center">{{lblInputLabel}}</label>
+                <input type="text" class="form-control" [(ngModel)]="inputTxt">
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-12 d-flex justify-content-between">
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnAC_Click()">AC</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnDelete_Click()">Del</button>
+                <button class="mx-2 btn btn-dark container-fluid">+/-</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnDivide_Click()">/</button>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-12 d-flex justify-content-between">
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnSeven_Click()">7</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnEight_Click()">8</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnNine_Click()">9</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnMultiply_Click()">X</button>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-12 d-flex justify-content-between">
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnFour_Click()">4</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnFive_Click()">5</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnSix_Click()">6</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnMinus_Click()">-</button>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-md-12 d-flex justify-content-between">
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnOne_Click()">1</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnTwo_Click()">2</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnThree_Click()">3</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnPlus_Click()">+</button>
+            </div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col-md-12 d-flex justify-content-between">
+                <button class="mx-2 btn btn-dark container-fluid">%</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnZero_Click()">0</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnPoint_Click()">.</button>
+                <button class="mx-2 btn btn-dark container-fluid" (click)="btnEqual_Click()">=</button>
+            </div>
+        </div>
+    </div>
+</div>

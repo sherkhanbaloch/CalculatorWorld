@@ -1,0 +1,53 @@
+<div class="container my-3">
+    <h3>GPA Calculator</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Semester</label>
+            <input type="text" class="form-control" [(ngModel)]="semesterTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <label class="form-label">Credit Hours</label>
+            <input type="number" min="0" class="form-control" [(ngModel)]="creditTxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+          <label class="form-label">GPA</label>
+            <input type="text" class="form-control" [(ngModel)]="GPATxt">
+        </div>
+        <div class="col-md-3 col-sm-11 mb-3">
+            <br />
+            <button class="btn btn-dark" (click)="btnAdd_Click()">Add To List</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 my-3 mx-auto">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Credit Hours</th>
+                        <th>GPA</th>
+                        <th>Weight/Average GPA</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of dt; track item.ID) {
+                    <tr>
+                        <td>{{item.Semester}}</td>
+                        <td>{{item.CreditHours}}</td>
+                        <td>{{item.GPA}}</td>
+                        <td>{{item.WeightAverageGPA}}</td>
+                        <td class="text-danger text-center" (click)="DeleteRow(item.ID)"><i
+                                class='bx bx-trash me-1'></i></td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <label class="form-label fs-4">Your CGPA Is: {{lblTotalCGPA}} </label>
+    </div>
+</div>
